@@ -5,6 +5,7 @@ package = Rooms
 version = 7.x-1.0
 project = rooms_faceted_search
 dependencies[] = features
+dependencies[] = rooms
 dependencies[] = rooms_unit
 dependencies[] = search_api_db
 dependencies[] = search_api_facetapi
