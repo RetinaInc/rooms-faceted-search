@@ -15,6 +15,9 @@ function rooms_faceted_search_block_info() {
     'info' => t('Rooms Availability Search Form'),
     'pages' => 'booking',
     'visibility' => BLOCK_VISIBILITY_LISTED,
+    'region' => 'content',
+    'status' => 1,
+    'weight' => -25,
   );
   return $blocks;
 }
