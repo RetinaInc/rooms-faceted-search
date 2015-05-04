@@ -47,7 +47,19 @@ function rooms_faceted_search_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['name']['link_to_entity'] = 1;
+  /* Filter criterion: Indexed Bookable Units: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_unit_index';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'unit_with_attributes' => 'unit_with_attributes',
+  );
+  /* Filter criterion: Indexed Bookable Units: Bookable */
+  $handler->display->display_options['filters']['bookable']['id'] = 'bookable';
+  $handler->display->display_options['filters']['bookable']['table'] = 'search_api_index_default_unit_index';
+  $handler->display->display_options['filters']['bookable']['field'] = 'bookable';
+  $handler->display->display_options['filters']['bookable']['value'] = '1';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

@@ -53,7 +53,7 @@ function rooms_faceted_search_default_search_api_index() {
         "bookable" : { "type" : "integer" },
         "changed" : { "type" : "integer" },
         "created" : { "type" : "integer" },
-        "field_attributes" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_attributes" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "max_children" : { "type" : "integer" },
         "max_sleeps" : { "type" : "integer" },
         "min_children" : { "type" : "integer" },
@@ -283,9 +283,9 @@ function rooms_faceted_search_default_search_api_server() {
             "boost" : "1.0"
           },
           "field_attributes" : {
-            "table" : "search_api_db_default_unit_index",
+            "table" : "search_api_db_default_unit_index_field_attributes",
             "column" : "field_attributes",
-            "type" : "integer",
+            "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
           },
           "search_api_language" : {
