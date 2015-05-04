@@ -16,7 +16,7 @@ function rooms_faceted_search_block_info() {
     'pages' => 'booking',
     'visibility' => BLOCK_VISIBILITY_LISTED,
     'region' => 'content',
-    'status' => 1,
+    'status' => TRUE,
     'weight' => -25,
   );
   return $blocks;
